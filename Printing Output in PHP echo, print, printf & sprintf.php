@@ -1,10 +1,10 @@
 <?php
 
-echo "Hello World !".PHP_EOL ;
+echo "Hello World !" ;
 
 // Output : Hello World !
 
-print "Welcome to PHP !".PHP_EOL ;
+print "Welcome to PHP !" ;
 
 // Output : Welcome to PHP !
 
