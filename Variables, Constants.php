@@ -41,29 +41,29 @@
 
 * PHP তে প্রধানত ৮ ধরনের ডেটা টাইপ ব্যবহার হয়:
 
- 	    নাম              (ইংরেজিতে)	        উদাহরণ
+ 	    নাম                     (ইংরেজিতে)	        উদাহরণ
 
- 1️⃣	String	          "Hello World"       'Parvez'
- 2️⃣	Integer	          1, -25,             1000
- 3️⃣	Float/Double	  10.5                -3.14
- 4️⃣	Boolean	          true, false
- 5️⃣	Array	          ["apple", "banana", "mango"]
- 6️⃣	Object	          User-defined class/object
- 7️⃣	NULL	          মান নেই (empty)
- 8️⃣	Resource	      External resource (e.g., database connection, file handler)
+ 1️⃣	String	                 "Hello World"       'Parvez'
+ 2️⃣	Integer	                 1, -25,             1000
+ 3️⃣	Float/Double	         10.5                -3.14
+ 4️⃣	Boolean	                 true, false
+ 5️⃣	Array	                 ["apple", "banana", "mango"]
+ 6️⃣	Object	                 User-defined class/object
+ 7️⃣	NULL	                 মান নেই (empty)
+ 8️⃣	Resource	             External resource (e.g., database connection, file handler)
 
 
 * টাইপ চেক করার জন্য ফাংশন:
 
- ফাংশন	            কাজ
+ ফাংশন	                	  কাজ
 
- is_string()	    স্ট্রিং কিনা চেক করে
- is_int()	        ইন্টিজার কিনা চেক করে
- is_float()	        ফ্লোট কিনা চেক করে
- is_bool()	        বুলিয়ান কিনা চেক করে
- is_array()	        অ্যারে কিনা চেক করে
- is_object()	    অবজেক্ট কিনা চেক করে
- is_null()	        null কিনা চেক করে
+ is_string()	              স্ট্রিং কিনা চেক করে
+ is_int()	                  ইন্টিজার কিনা চেক করে
+ is_float()	                  ফ্লোট কিনা চেক করে
+ is_bool()	                  বুলিয়ান কিনা চেক করে
+ is_array()	                  অ্যারে কিনা চেক করে
+ is_object()	              অবজেক্ট কিনা চেক করে
+ is_null()	                  null কিনা চেক করে
 
 
 * PHP-তে ৬টি প্রধান Arithmetic Operators আছে:
@@ -80,7 +80,7 @@
 
  1. Assignment Operators (এসাইনমেন্ট অপারেটর) : এই অপারেটরগুলোর মাধ্যমে ভ্যারিয়েবলে মান সংরক্ষণ করা হয়।
 
- অপারেটর	            উদাহরণ    	    ব্যাখ্যা
+ অপারেটর	        উদাহরণ    	    ব্যাখ্যা
      =	            $x = 10	        $x এর মধ্যে 10 রাখে
      +=	            $x += 5	        $x = $x + 5
      -=	            $x -= 3	        $x = $x - 3
@@ -92,16 +92,16 @@
  2. Comparison Operators (তুলনা করার অপারেটর)
  দুইটি মানের মধ্যে তুলনা করে true বা false রিটার্ন করে।
 
-  অপারেটর	        অর্থ	                            উদাহরণ
-     ==	        সমান কিনা	                        $x == $y
-     ===	    মান ও টাইপ দুইটাই সমান কিনা	        $x === $y
-     !=	        সমান না	                            $x != $y
-     <>	        সমান না	                            $x <> $y
-     !==	    মান বা টাইপ যেকোনো একটাও ভিন্ন	    $x !== $y
-     >	        বড় কিনা	                            $x > $y
-     <	        ছোট কিনা	                        $x < $y
-     >=	        বড় বা সমান	                        $x >= $y
-     <=	        ছোট বা সমান	                        $x <= $y
+  অপারেটর	            অর্থ	                            উদাহরণ
+     ==	            সমান কিনা	                        $x == $y
+     ===	        মান ও টাইপ দুইটাই সমান কিনা	        $x === $y
+     !=	            সমান না	                            $x != $y
+     <>	            সমান না	                            $x <> $y
+     !==	        মান বা টাইপ যেকোনো একটাও ভিন্ন	    $x !== $y
+     >	            বড় কিনা	                            $x > $y
+     <	            ছোট কিনা	                        $x < $y
+     >=	            বড় বা সমান	                        $x >= $y
+     <=	            ছোট বা সমান	                        $x <= $y
 
 
  3. Logical Operators (যুক্তিবাচক অপারেটর) : একাধিক শর্ত যাচাই করতে ব্যবহৃত হয়।
