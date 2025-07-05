@@ -3,7 +3,7 @@
 ✅ Callback Function মানে হলো — “একটা ফাংশনের মধ্যে আরেকটা ফাংশনকে কল করার জন্য নাম হিসেবে পাঠানো।”
  এটা PHP-তে অনেক array function ও custom logic-এ দরকার হয়।
 
- function square($n)
+function square($n)
  {
      return $n * $n;
  }
