@@ -1,6 +1,6 @@
 <?php
 
- Multidimensional Array মানে এমন একটি অ্যারে যার ভেতরে আরেকটি অ্যারে থাকে।
+✅ Multidimensional Array মানে এমন একটি অ্যারে যার ভেতরে আরেকটি অ্যারে থাকে।
  একটি অ্যারের ভেতরে এক বা একাধিক অ্যারে থাকে — এটিই Multidimensional Array।
 
  $person = [
