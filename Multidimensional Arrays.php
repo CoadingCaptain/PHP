@@ -1,58 +1,97 @@
 <?php
 
-✅ Multidimensional Array মানে এমন একটি অ্যারে যার ভেতরে আরেকটি অ্যারে থাকে।
+ ✅  Multidimensional Array মানে এমন একটি অ্যারে যার ভেতরে আরেকটি অ্যারে থাকে।
  একটি অ্যারের ভেতরে এক বা একাধিক অ্যারে থাকে — এটিই Multidimensional Array।
 
- $person = [
-     ["name" => "Alex", "city" => "London"],
-     ["name" => "Jack", "city" => "Canada"],
+ ✅ Multidimensional Indexed Array এমন একটি অ্যারে যেখানে প্রতিটি উপাদান আবার একটি অ্যারে হয়ে থাকে — অর্থাৎ অ্যারের ভিতরে অ্যারে।
+
+ 🔶 Basic Multidimensional Indexed Array
+
+ $students = [
+     ["Alex", "Canada", 23],
+     ["Jack", "London", 25],
  ];
- print_r($person);
+ print_r($students);
 
  Output : Array
           (
               [0] => Array
                   (
-                      [name] => Alex
-                      [city] => London
+                      [0] => Alex
+                      [1] => Canada
+                      [2] => 23
                   )
               [1] => Array
                   (
-                      [name] => Jack
-                      [city] => Canada
+                      [0] => Jack
+                      [1] => London
+                      [2] => 25
                   )
           )
 
+ 🔶 Access করা (ডেটা বের করা)
 
-✅ Access nested elements
-
- $person = [
-     ["name" => "Alex", "city" => "London"],
-     ["name" => "Jack", "city" => "Canada"],
+ $students = [
+     ["Alex", "Canada", 23],
+     ["Jack", "London", 25],
  ];
- print_r($person[0]["name"]);
+ print_r($students[1][1]);
 
- Output : Alex
+ Output : London
 
-✅ Modify a nested value
 
-$person = [
-    ["name" => "Alex", "city" => "London"],
-    ["name" => "Jack", "city" => "Canada"],
-];
-$person[1]["name"] = "Doe";
-print_r($person);
+ ✅ PHP তে Multidimensional Associative Array হলো এমন একটি অ্যারে যেখানে প্রতিটি উপাদান আবার একটি অ্যাসোসিয়েটিভ অ্যারে হয় — অর্থাৎ: key-value pair এর মধ্যে অ্যারে।
+
+ 🔶 Basic Multidimensional Associative Array
+
+ $students = [
+     [
+         "name" => "David",
+         "age" => 17,
+         "city" => "Canada"
+     ],
+
+     [
+         "name" => "Alex",
+         "age" => 19,
+         "city" => "America"
+     ]
+ ];
+
+ print_r($students);
 
  Output : Array
           (
               [0] => Array
                   (
-                      [name] => Alex
-                      [city] => London
+                      [name] => David
+                      [age] => 17
+                      [city] => Canada
                   )
               [1] => Array
                   (
-                      [name] => Doe
-                      [city] => Canada
+                      [name] => Alex
+                      [age] => 19
+                      [city] => America
                   )
           )
+
+ 🔶 Access করা (ডেটা বের করা):
+
+ $students = [
+     [
+         "name" => "David",
+         "age" => 17,
+         "city" => "Canada"
+     ],
+
+     [
+         "name" => "Alex",
+         "age" => 19,
+         "city" => "America"
+     ]
+ ];
+
+ print_r($students[0]["name"]);
+
+ Output : David
