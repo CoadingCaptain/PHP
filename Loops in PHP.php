@@ -46,3 +46,64 @@ foreach($fruits as $item){
 }
 
  Output : apple orange cherry banana 
+
+
+ ✅ Loop over Multidimensional Indexed Array
+
+ $numbers = [
+     [10, 20, 30],
+     [40, 50, 60],
+     [70, 80, 90]
+ ];
+
+ foreach ($numbers as $parentNumber) {
+     foreach ($parentNumber as $childNumber) {
+         print_r($childNumber . " ") ;
+     }
+ }
+
+ Output : 10 20 30 40 50 60 70 80 90 
+
+ ✅ Loop over Multidimensional Associative Array
+
+ $students = [
+     [
+         "name" => "Raj",
+         "age" => 18,
+         "city" => "Dhaka"
+     ],
+     [
+         "name" => "Amin",
+         "age" => 19,
+         "city" => "Khulna"
+     ]
+ ] ;
+ foreach ($students as $parentKey => $parentValue) {
+     foreach ($parentValue as $childKey => $childValue) {
+         print_r($childKey . " : " . $childValue . " ") ;
+     }
+     echo PHP_EOL ;
+ }
+
+ Output : name : Raj age : 18 city : Dhaka 
+          name : Amin age : 19 city : Khulna
+
+ ✅ শুধু প্রথম ইনডেক্স এর মান দেখতে চাইলে
+
+$students = [
+    [
+        "name" => "Raj",
+        "age" => 18,
+        "city" => "Dhaka"
+    ],
+    [
+        "name" => "Amin",
+        "age" => 19,
+        "city" => "Khulna"
+    ]
+];
+
+foreach ($students[0] as $pKey => $pValue) {
+    print_r($pKey . " : " . $pValue . " ") ;
+}
+Output : name : Raj age : 18 city : Dhaka 
