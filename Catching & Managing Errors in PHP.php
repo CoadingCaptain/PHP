@@ -1,6 +1,6 @@
 <?php
 
-// ✅ PHP-তে try এবং catch ব্লক ব্যবহার করা হয় error (exception) ধরার জন্য, যেন প্রোগ্রাম হঠাৎ থেমে না যায় এবং আমরা সুন্দরভাবে error handle করতে পারি।
+✅ PHP-তে try এবং catch ব্লক ব্যবহার করা হয় error (exception) ধরার জন্য, যেন প্রোগ্রাম হঠাৎ থেমে না যায় এবং আমরা সুন্দরভাবে error handle করতে পারি।
 
 try {
     $condition = false;
@@ -12,4 +12,4 @@ try {
     echo "" . $e->getMessage();
 }
 
-// Output : Condition is not true
+ Output : Condition is not true
