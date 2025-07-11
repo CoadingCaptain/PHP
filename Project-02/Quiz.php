@@ -9,8 +9,13 @@ $questions = [
 $answer = [];
 foreach ($questions as $index => $item) {
     echo ($index + 1) . " " . $item["question"] . PHP_EOL;
-    $data = (int)trim(readline("Your answer : "));
-    array_push($answer, $data);
+    $data = trim(readline("Your answer : "));
+    if ($data === "") {
+        echo "\nYou didn't enter any answer for question " . ($index + 1) . ".\n" . PHP_EOL;
+        $answer[] = null;
+    } else {
+        array_push($answer, (int)$data);
+    }
 }
 function quiz($questions, $answer)
 {
@@ -23,12 +28,12 @@ function quiz($questions, $answer)
     return $score;
 }
 $score = quiz($questions, $answer);
-echo "Your score is {$score} out of " . count($questions) . "." . PHP_EOL;
+echo "\nYour score is {$score} out of " . count($questions) . "." . PHP_EOL;
 
 if ($score === count($questions)) {
-    echo "Excellent job 😍";
+    echo "\nExcellent job 😍";
 } elseif ($score >= 1) {
-    echo "Good effort 🙂";
+    echo "\nGood effort 🙂";
 } else {
-    echo "Better luck next time 😒";
+    echo "\nBetter luck next time 😒";
 }
