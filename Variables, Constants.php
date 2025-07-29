@@ -1,6 +1,6 @@
 <?php
 
-// Variable
+✅ Variable
 
  1.  ভ্যারিয়েবল (Variable) কী?
      ভ্যারিয়েবল হলো একটি কন্টেইনার বা ধারক, যেখানে কোনো তথ্য বা মান (value) সংরক্ষণ করা যায় ।
@@ -14,13 +14,18 @@
 
     $name = "Panda" ;
     $age = 20 ;
-
+    
     echo "Hello I am $name. My age is $age." ;
+    
+     Output : Hello I am Panda. My age is 20.
+    
+ *  $age = 16;
+    $word = "age";
+    echo $$word;
 
-    // Output : Hello I am Panda. My age is 20.
+     Output : 16  
 
-
-// Constant
+ ✅ Constant
 
  1. Constant বা ধ্রুবক হচ্ছে এমন একটি ভেরিয়েবল যেটার মান একবার নির্ধারণ করলে তা পরিবর্তন করা যায় না। 
     সাধারণ ভেরিয়েবল ($ চিহ্ন দিয়ে শুরু হয়) এর মতো না, এটি একবার সেট করা হলে পুরো স্ক্রিপ্টে অপরিবর্তনীয় থাকে।
@@ -37,7 +42,7 @@
     
     Output : Not a Tiger.
 
-// Data Type 
+ Data Type 
 
 * PHP তে প্রধানত ৮ ধরনের ডেটা টাইপ ব্যবহার হয়:
 
