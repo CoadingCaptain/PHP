@@ -67,3 +67,10 @@ $result = sprintf("Hello I am %s. I am from %s. I am %d years old.","Alex","Cana
 echo $result ;
 
  Output : Hello I am Alex. I am from Canada. I am 25 years old.
+
+$f = false || true;
+$g = false or true;
+var_dump($f, $g);
+
+ Output : bool(true)
+          bool(false)
