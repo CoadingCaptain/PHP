@@ -1,5 +1,8 @@
 <?php
 
+PHP strict mood
+declare(strict_types=1);
+
 ✅ PHP-তে function হলো কোডের এমন একটি অংশ, যেটা আমরা বারবার ব্যবহার করতে পারি, একবার লিখে।
 
 ✅ Function এর কাজ কী ? 
@@ -91,4 +94,5 @@ $result = add(20,25) ;
 echo $result ; 
 
  Output : 45
+
 
