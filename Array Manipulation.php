@@ -379,3 +379,195 @@ print_r($evenNumbers);
               [3] => 8
               [4] => 10
           )
+
+✅ json_encode() - যার কাজ হলো PHP এর কোনো ডাটা (যেমন: array, object) কে JSON format এ রূপান্তর করা।
+
+$data = [
+    "name" => "Jack",
+    "Id" => "1101",
+    "age" => "16"
+];
+$newData = json_encode($data);
+echo $newData;
+
+ Output : {"name":"Jack","Id":"1101","age":"16"}
+
+✅ json_decode() - যার কাজ হলো JSON format এর string কে PHP array বা object এ রূপান্তর করা।
+
+$decodeData = json_decode($newData, true);
+print_r($decodeData);
+
+ Output : Array
+          (
+              [name] => Jack
+              [Id] => 1101
+              [age] => 16
+          )
+
+✅ Copy By Value or Deep Copy
+
+$data = [
+    "fname" => "Jane",
+    "lname" => "Doe",
+];
+$newData = $data;
+$newData['lname'] = "Aim";
+print_r($data);
+print_r($newData);
+              
+ Output : Array
+          (
+              [fname] => Jane
+              [lname] => Doe
+          )
+          Array
+          (
+              [fname] => Jane
+              [lname] => Aim
+          )
+
+✅ Copy by Reference or Shallow Copy 
+
+$data = [
+    "fname" => "Jane",
+    "lname" => "Doe",
+];
+$newData = &$data;
+$newData['lname'] = "Aim";
+print_r($data);
+print_r($newData);
+
+ Output : Array
+          (
+              [fname] => Jane
+              [lname] => Aim
+          )
+          Array
+          (
+              [fname] => Jane
+              [lname] => Aim
+          )
+
+✅ unset() ফাংশনের কাজ হচ্ছে কোনো ভেরিয়েবল, অ্যারে এলিমেন্ট, বা অবজেক্ট প্রপার্টি মেমোরি থেকে মুছে ফেলা বা ডিলিট করা।
+
+$data = [
+    "fname" => "Jane",
+    "lname" => "Doe"
+];
+unset($data['lname']);
+print_r($data);
+
+ Output : Array
+          (
+              [fname] => Jane
+          )
+ 
+✅ isset() - ফাংশনের কাজ হলো — কোনো ভেরিয়েবল সেট আছে কিনা এবং সেটি null নয় কিনা, তা চেক করা।
+
+$number = "";
+if (isset($number) && (is_numeric($number)) || ($number != "")) {
+    echo "The number is set & it isn't empty";
+} else {
+    echo "The number isn't set & it's empty";
+}
+
+ Output : The number isn't set & it's empty
+
+✅ in_array() - ফাংশনের কাজ হলো — একটি নির্দিষ্ট মান কোনো অ্যারেতে আছে কিনা, তা যাচাই করা।
+
+$numbers = [10, 20, 30, 40, 50, 60, 70];
+$search = in_array(30, $numbers);
+echo $search;
+
+ Output : 1
+
+✅ array_search() - একটি অ্যারের মধ্যে থেকে কোনো নির্দিষ্ট মান (value) খুঁজে বের করে তার key (বা index) রিটার্ন করা।
+
+$numbers = [10, 20, 30, 40];
+$search = array_search(40, $numbers);
+echo $search;
+
+ Output : 3
+
+✅ array_walk() একটি অ্যারের প্রতিটি উপাদানকে ধরে ধরে একটি কলব্যাক ফাংশন চালায়।
+
+$numbers = [2, 4, 6];
+function square($n)
+{
+    printf("The square of %d is %d.\n", $n, $n * $n);
+}
+array_walk($numbers, "square");
+
+ Output : The square of 2 is 4.
+          The square of 4 is 16.
+          The square of 6 is 36.
+
+✅ array_map() - যা একটি অ্যারের প্রতিটি উপাদানের উপর একটি ফাংশন প্রয়োগ করে এবং নতুন একটি অ্যারে রিটার্ন করে।
+
+$numbers = [2, 4, 6];
+function cube($n)
+{
+    return $n * $n * $n;
+}
+$cube = array_map("cube", $numbers);
+print_r($cube);
+
+ Output : Array
+          (
+              [0] => 8
+              [1] => 64
+              [2] => 216
+          )
+
+✅ একটি অ্যারের মধ্যে সকল ‍বিজোড় সংখ্যার যোগফল বের করা
+
+$numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+$even = [];
+foreach ($numbers as $item) {
+    if ($item % 2 != 0) {
+        array_push($even, $item);
+    }
+}
+$sum = array_sum($even);
+echo $sum;
+
+ Output : 25
+
+✅ Working wind mt_rand() function
+
+$random = mt_rand(0, 50);
+$luck = $random;
+if ($luck % 2 == 0) {
+    echo "Head";
+} else {
+    echo "Tail";
+}
+
+ Output : Head or Tail
+
+✅ wordwrap() - ফাংশনটি মূলত বড় টেক্সটকে নির্দিষ্ট দৈর্ঘ্যে ভাগ করে নতুন লাইন (\n) যোগ করার জন্য ব্যবহার হয়।
+
+$string = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cumque mollitia culpa, ipsum minus dolores autem odio animi quis nesciunt!";
+$wrap = wordwrap($string, 20);
+echo $wrap;
+
+ Output : Lorem ipsum dolor
+          sit amet,
+          consectetur
+          adipisicing elit.
+          Consequuntur cumque
+          mollitia culpa,
+          ipsum minus dolores
+          autem odio animi
+          quis nesciunt!
+
+✅ nl2br() - স্ট্রিং এর মধ্যে যেখানে নতুন লাইন (\n) আছে, সেখানে HTML এর <br> ট্যাগ বসিয়ে দেয়, যাতে ব্রাউজারে লাইন ব্রেক দেখা যায়।
+
+$string = "hello \n from \n Ostad \n team.";
+$newString = nl2br($string);
+echo $newString;
+
+ Output : hello <br />
+          from <br />
+          Ostad <br />
+          team.
